@@ -1,13 +1,11 @@
 import cv2
 import mediapipe as mp
-import showLandmarks as slm
 
 # Default camera (index O)
 cap = cv2.VideoCapture(0)
 
 mp_hands = mp.solutions.hands
 mp_face_mesh = mp.solutions.face_mesh
-mp_draw = mp.solutions.drawing_utils
 
 hands = mp_hands.Hands(
     min_detection_confidence=0.5,
